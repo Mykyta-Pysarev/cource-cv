@@ -177,6 +177,7 @@ background-color: #D2D2D4;
 
     .candidate-contact-info{
         min-width: 90%;
+        flex-wrap: wrap;
     }
 
     .candidate-name{
