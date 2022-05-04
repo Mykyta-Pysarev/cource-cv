@@ -5,6 +5,7 @@ body, html {
 
 body {
     background-image: url(/pictures/background.png);
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -25,8 +26,8 @@ h4 {
 
 main {
     margin: 30px auto;
-    width: 210mm;
-    height: 297mm;
+    width: 90%;
+    height: 90%;
     background-color: #EBEBED;
 }
 
@@ -36,7 +37,7 @@ main {
     display:flex;
     }
 
-.header h3 {
+.header h2 {
     font-weight: normal;
 }
 
@@ -46,14 +47,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .candidate-photo {
-    height:50%;
-    width:50%;
+    height: 120px;
+    width: 120px;
     background-image: url(/pictures/candidate-photo.png);
-    border-radius: 200px;
+    border-radius: 50%;
 }
 
 .header-section-right {
@@ -62,12 +62,12 @@ main {
     display:flex;
     align-items: center;
     flex-flow: column;
-    justify-content:center;
+    justify-content:space-evenly;
 }
 
 .candidate-name{
-    width:125mm;
-    height:145px;
+    width:55%;
+    height:55%;
     background-color: #ECECEE;
     display:flex;
     align-items: center;
@@ -76,8 +76,8 @@ main {
 }
 
 .candidate-name-text{
-    width:116mm;
-    height:115px;
+    width:calc(100% - 10px *2);
+    height:calc(100% - 10px *2);
     border:3px #D7D7D9 solid;
     background-color: #ECECEE;
     display:flex;
@@ -87,13 +87,12 @@ main {
 }
 
 .candidate-name-text h1{
-    font-size: 29pt;
+    font-size: 3vw;
     font-weight: bold;
 }
 
 .candidate-contact-info{
-    width: 125mm;
-    margin-top: 30px;
+    width: 55%;
     display:flex;
     align-items:flex-end;
     justify-content:space-between;
@@ -105,7 +104,7 @@ main {
 }
 
 .content {
-    height: calc(100% - 260px);
+    height: calc(100% - 260px - 5px);
     display: flex;
     border-top: 5px #D5D5D7 solid;
 }
@@ -135,7 +134,7 @@ background-color: #D2D2D4;
 }
 
 .content-right {
-    width: 70%;
+    width: calc(70% - 5px);
     background-color: #EAEAEC;
     border-left: 5px #D5D5D7 solid;
 }
@@ -157,4 +156,68 @@ background-color: #D2D2D4;
     display: flex;
     width: 100%;
     justify-content:space-between;
+    padding: 2% 0;
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        flex-flow: column;
+        height: 512px;
+    }
+
+    .header-section-left {
+        min-width:100%;
+        min-height: 30%;
+    }
+
+    .header-section-right {
+        min-width:100%;
+        min-height: 70%;
+    }
+
+    .candidate-contact-info{
+        min-width: 90%;
+    }
+
+    .candidate-name{
+        min-width:95%;
+        height:55%;
+    }
+    
+    .candidate-name-text{
+        min-width:calc(95% - 10px *2);
+        height:calc(100% - 10px *2);
+    }
+
+    .candidate-name-text h1{
+        font-size: 20pt;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content-left {
+        width: 100%;
+    }
+
+    .content-right {
+        width: 100%;
+        border-left: none;
+    }
+
+    .right-section-text {
+        min-width: 90%;
+    }
+
+    .left-section-text {
+        min-width: 90%;
+        padding:20px 5% 0 5%;
+    }
+
+    .left-section-title {
+        width: 90%;
+        padding:30px 5% 0 5%;
+    }
+
 }
