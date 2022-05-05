@@ -7,20 +7,21 @@ body {
     background-image: url(../../pictures/background.png);
     background-repeat: no-repeat;
     background-size: cover;
+    font-size: 16px;
 }
 
 
 p, li{
-    font-size: 8pt;
+    font-size: 0.7rem;
 }
 
 h3 {
-    font-size: 10pt;
+    font-size: 1.0rem;
     font-weight: bold;
 }
 
 h4 {
-    font-size: 12pt;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -32,9 +33,11 @@ main {
 }
 
 .header {
-    height:260px;
-    width:100%;
-    display:flex;
+    min-height: 260px;
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
     }
 
 .header h2 {
@@ -42,7 +45,8 @@ main {
 }
 
 .header-section-left {
-    width:30%;
+    flex:1 1 30%;
+    min-height: 135px;
     background-image: url(../../pictures/photo-bg.png);
     display: flex;
     justify-content: center;
@@ -57,7 +61,7 @@ main {
 }
 
 .header-section-right {
-    width:70%;
+    flex: 1 1 70%;
     background-color: #D7D7D9;
     display:flex;
     align-items: center;
@@ -66,18 +70,20 @@ main {
 }
 
 .candidate-name{
-    width:55%;
-    height:55%;
+    min-width:55%;
+    min-height:55%;
     background-color: #ECECEE;
     display:flex;
     align-items: center;
     flex-flow: column;
     justify-content:center;
+    text-align: center;
 }
 
 .candidate-name-text{
-    width:calc(100% - 10px *2);
-    height:calc(100% - 10px *2);
+    min-width:calc(100% - (3px + 7px) *2);
+    min-height:calc(100% - (3px + 7px) * 2);
+    margin: 7px;
     border:3px #D7D7D9 solid;
     background-color: #ECECEE;
     display:flex;
@@ -87,79 +93,88 @@ main {
 }
 
 .candidate-name-text h1{
-    font-size: 3vw;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 .candidate-contact-info{
-    width: 55%;
+    min-width: 55%;
     display:flex;
     align-items:flex-end;
     justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.candidate-contact-info div{
+    margin: 0 0.3rem;
 }
 
 .candidate-contact-info h2{
-    font-size: 8pt;
+    font-size: 0.7rem;
     font-weight: bold;
 }
 
 .content {
-    height: calc(100% - 260px - 5px);
     display: flex;
-    border-top: 5px #D5D5D7 solid;
+    border-top: 0.3rem #D5D5D7 solid;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
 }
 
 .content-left {
-    width: 30%;
     background-color: #EAEAEC;
+    flex: 1 1 calc(30% - 2 * 0.4rem);
+    padding: 0.4rem; 
+    flex-wrap: wrap;
 }
 
 .left-section-title {
     display: flex;
     align-items: center;
-    width: 80%;
-    padding:30px 10% 0 10%;
     justify-content:space-between;
+    flex-wrap: wrap;
 }
 
 .section-title-decoration {
-height: 5px;
-width: 50px;
-background-color: #D2D2D4;
+    height: 5px;
+    width: 50px;
+    background-color: #D2D2D4;
 }
 
 .left-section-text {
-    width: 80%;
-    padding:20px 10% 0 10%;
+    flex: 1 1;
+    padding: 0.4rem; 
+    flex-wrap: wrap;
 }
 
 .content-right {
-    width: calc(70% - 5px);
+    flex: 1 1 calc(70% - 3 * 5px);
     background-color: #EAEAEC;
     border-left: 5px #D5D5D7 solid;
+    padding: 5px;
 }
 
 .right-section-title {
     display: flex;
     align-items: center;
-    width: 90%;
-    padding:30px 5% 0 5%;
+    flex: 1 1 90%;
     justify-content:space-between;
+    flex-wrap: wrap;
 }
 
 .right-section-text {
-    width: 90%;
-    padding:20px 5% 0 5%;
+    flex: 1 1 90%;
+    flex-wrap: wrap;
 }
 
 .job-history {
     display: flex;
-    width: 100%;
+    flex-basis: 100%;
     justify-content:space-between;
-    padding: 2% 0;
+    flex-wrap: wrap;
 }
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     .header {
         flex-flow: column;
         height: 512px;
@@ -221,4 +236,4 @@ background-color: #D2D2D4;
         padding:30px 5% 0 5%;
     }
 
-}
+} */
