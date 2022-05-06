@@ -1,13 +1,13 @@
 body, html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5;
+    font-size: 16px;
 }
 
 body {
     background-image: url(../../pictures/background.png);
     background-repeat: no-repeat;
     background-size: cover;
-    font-size: 16px;
 }
 
 
@@ -26,14 +26,14 @@ h4 {
 }
 
 main {
-    margin: 30px auto;
+    margin: 2rem auto;
     width: 90%;
     height: 90%;
     background-color: #EBEBED;
 }
 
 .header {
-    min-height: 260px;
+    min-height: 16rem;
     flex-basis: 100%;
     display: flex;
     flex-wrap:wrap;
@@ -46,7 +46,7 @@ main {
 
 .header-section-left {
     flex:1 1 30%;
-    min-height: 135px;
+    min-height: 8rem;
     background-image: url(../../pictures/photo-bg.png);
     display: flex;
     justify-content: center;
@@ -54,10 +54,11 @@ main {
 }
 
 .candidate-photo {
-    height: 120px;
-    width: 120px;
+    height: 7.4rem;
+    width: 7.4rem;
     background-image: url(../../pictures/candidate-photo.png);
     border-radius: 50%;
+    background-repeat: no-repeat;
 }
 
 .header-section-right {
@@ -81,10 +82,10 @@ main {
 }
 
 .candidate-name-text{
-    min-width:calc(100% - (3px + 7px) *2);
-    min-height:calc(100% - (3px + 7px) * 2);
-    margin: 7px;
-    border:3px #D7D7D9 solid;
+    min-width:calc(100% - (0.2rem + 0.4rem) *2);
+    min-height:calc(100% - (0.2rem + 0.4rem) * 2);
+    margin: 0.4rem;
+    border: 0.2rem #D7D7D9 solid;
     background-color: #ECECEE;
     display:flex;
     align-items: center;
@@ -136,8 +137,8 @@ main {
 }
 
 .section-title-decoration {
-    height: 5px;
-    width: 50px;
+    height: 0.3rem;
+    width: 3rem;
     background-color: #D2D2D4;
 }
 
@@ -150,8 +151,8 @@ main {
 .content-right {
     flex: 1 1 calc(70% - 3 * 5px);
     background-color: #EAEAEC;
-    border-left: 5px #D5D5D7 solid;
-    padding: 5px;
+    border-left: 0.3rem #D5D5D7 solid;
+    padding: 0.3rem;
 }
 
 .right-section-title {
@@ -167,11 +168,21 @@ main {
     flex-wrap: wrap;
 }
 
+.job-info {
+    padding: 0.3rem;
+}
+
 .job-history {
     display: flex;
     flex-basis: 100%;
     justify-content:space-between;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 800px){
+    .content-right {
+        border-left: none;
+    }
 }
 
 /* @media screen and (max-width: 900px) {
